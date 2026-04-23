@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello, World!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
     
 <body>
     <header>
-    	<img src="logo.png" alt="МосковскийПолитех">
+    	<img src="../logo.png" alt="МосковскийПолитех">
     	<h1>Лабораторная работа №1</h1>
     </header>
     
