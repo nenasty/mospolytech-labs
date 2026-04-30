@@ -1,0 +1,312 @@
+:root {
+    --color_a: rgb(1, 5, 17);
+    --back_a: rgba(222, 93, 131, 0.25);
+    --blue: #DE5D83;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(247, 247, 247);
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER / МЕНЮ ===== */
+header {
+    width: 100%;
+    background-color: rgba(222, 93, 131, 0.856);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(1, 5, 17);
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+header a:hover {
+    background-color: rgba(222, 93, 131, 0.3);
+}
+
+header a.select {
+    color: red;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+/* ===== ПОДМЕНЮ СОРТИРОВКИ ===== */
+.submenu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 12px 0 6px;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: var(--color_a);
+    font-size: 14px;
+    padding: 5px 14px;
+    border-radius: 5px;
+    background-color: rgba(222, 93, 131, 0.2);
+    transition: background 0.2s;
+}
+
+.submenu a:hover {
+    background-color: var(--back_a);
+}
+
+.submenu a.select {
+    color: red;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    padding: 20px 30px 80px;
+    text-align: left; 
+}
+
+/* ===== ТАБЛИЦА ===== */
+table {
+    margin: 10px auto;
+    border-collapse: separate;
+    border-spacing: 3px;
+    font-size: 14px;
+}
+
+th {
+    background-color: rgba(222, 93, 131, 0.4);
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+td {
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    word-break: break-word;   
+    white-space: normal;      
+}
+
+/* ===== ПАГИНАЦИЯ ===== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 4px;
+    background-color: rgba(222, 93, 131, 0.15);
+    color: var(--color_a);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pagination a:hover {
+    border: 2px solid var(--color_a);
+    padding: 3px 10px;
+}
+
+.pagination a.active {
+    background-color: rgba(222, 93, 131, 0.8);
+    color: white;
+    font-weight: bold;
+}
+
+/* ===== ФОРМА ДОБАВЛЕНИЯ / РЕДАКТИРОВАНИЯ ===== */
+.column {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-bottom: 12px;
+    gap: 15px;
+}
+
+.add label {
+    width: 130px;
+    text-align: left;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.add input,
+.add select,
+.add textarea {
+    flex: 1;
+    padding: 6px 10px;
+    font-size: 15px;
+    border: 1px solid var(--color_a);
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: auto;
+}
+
+.add textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* ===== КНОПКА ===== */
+.form-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: var(--blue);
+    border: none;
+    width: 200px;
+    height: 42px;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-btn:hover {
+    background-color: #b8486c;
+}
+
+/* ===== СООБЩЕНИЯ ===== */
+.success, .error {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 15px;
+}
+
+.success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+}
+
+.error {
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* ===== РЕДАКТИРОВАНИЕ: список + форма ===== */
+.edit-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.div-edit {
+    width: 200px;
+    text-align: left;
+    border-right: 2px solid rgba(222, 93, 131, 0.25);
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.div-edit h3 {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.div-edit a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: var(--color_a);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 4px;
+    transition: background 0.2s;
+}
+
+.div-edit a:hover {
+    background-color: var(--back_a);
+}
+
+.div-edit .currentRow {
+    background-color: var(--back_a);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* ===== УДАЛЕНИЕ ===== */
+.delete-list {
+    margin: 30px auto;
+    width: 300px;
+    text-align: left;
+    background: white;
+    border-radius: 8px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.delete-list h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.delete-list a {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #c0392b;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 4px;
+    transition: background 0.2s;
+}
+
+.delete-list a:hover {
+    background-color: #fde8e8;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: var(--blue);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 14px;
+}
