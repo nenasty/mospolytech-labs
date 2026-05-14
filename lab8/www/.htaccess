@@ -1,0 +1,12 @@
+RewriteEngine On 
+#включаем режим перенаправления запросов
+#серверу "слушай мои правила"
+
+#если адрес не является папкой
+RewriteCond %{SCRIPT_FILENAME} !-d
+#если адрес не является файлом
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+
+#любой адрес перенаправляй на index.php, передавай адрес как параметр route
+RewriteRule ^(.*)$ ./index.php?route=$1 [QSA,L]
